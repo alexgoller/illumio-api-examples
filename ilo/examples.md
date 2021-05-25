@@ -1,3 +1,8 @@
+# Create empty ruleset
+
+* Apply to scope with shown array of labels
+
+    ilo rule_set create --name "Example App Ruleset" --scopes '[[ { "label" : { "href":"/orgs/1/labels/15"}},{"label":{"href":"/orgs/1/labels/17"}}]]'
 # Create ruleset with intrascope AMS (all workloads) rule and HTTPS ingress (check service, here the ingress service is 55)
 
 * ingress_services holds the incoming services for that rule
