@@ -6,7 +6,9 @@
 ilo rule_set create --name "Example App Ruleset" --scopes '[[ { "label" : { "href":"/orgs/1/labels/15"}},{"label":{"href":"/orgs/1/labels/17"}}]]'
 ```
 
-# Create ruleset with intrascope AMS (all workloads) rule and HTTPS ingress (check service, here the ingress service is 55)
+# Create ruleset with intrascope AMS (all workloads) rule and HTTPS ingress
+
+Service needs to be a service object from the Illumio Core PCE (here the ingress service is 55)
 
 * ingress_services holds the incoming services for that rule
 * extra scope rules must have unscoped_consumers set to true
