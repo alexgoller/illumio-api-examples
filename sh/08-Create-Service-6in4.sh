@@ -3,7 +3,7 @@
 # can be used to create services for IP protocols not in the official UI interface (e.g. SCTP, 6in4, etc)
 
 curl --data '{ "name":"6in4","service_ports": [{ "proto":41}]}' \
-     -X POST https://pce_host:8443/api/v2/orgs/2/sec_policy/draft/services \
+     -X POST $ILO_SERVER:8443/api/v2/orgs/2/sec_policy/draft/services \
      -u $ILO_API_KEY:$ILO_API_TOKEN \
      -H 'Content-Type: application/json' \
      -H 'Accept: application/json'
