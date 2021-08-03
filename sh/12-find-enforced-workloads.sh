@@ -6,4 +6,4 @@ curl -X GET $ILO_SERVER/api/v2/orgs/$ILO_ORG/workloads \
      -u $ILO_API_KEY:$ILO_API_TOKEN \
      -H 'Content-Type: application/json' \
      -H 'Accept: application/json' | \
-     jq '.[]| { hostname: .hostname, interfaces: .interfaces[].address, enforcement: .enforcement_mode} | select(.enforcement == "full" or .enforcement == "visibility_only" or .enforcement == "selective")| [.hostname,.interfaces,.enforcement]| @csv'
+     jq '.[]| { hostname: .hostname, interfaces: .interfaces[].address, enforcement: .enforcement_mode} | select(.enforcement == "full")| [.hostname,.interfaces,.enforcement]| @csv'
